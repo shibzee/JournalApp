@@ -1,0 +1,86 @@
+{
+  "project_info": {
+    "project_number": "797012760021",
+    "firebase_url": "https://usalnews-26642.firebaseio.com",
+    "project_id": "usalnews-26642",
+    "storage_bucket": "usalnews-26642.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797012760021:android:3ed1d880e1dd7d8d",
+        "android_client_info": {
+          "package_name": "com.journalapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "797012760021-t3ds67ra6trthtd8q7r0b1ehp61bt23d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3hwizl0K01QJGkEQhtIqT68SUnrj-GBQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797012760021:android:9ffe4e0911600195",
+        "android_client_info": {
+          "package_name": "com.usal.usalnews"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "797012760021-oapk0l3m0tab6j6vo7b396hp1k4tdf4a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.usal.usalnews",
+            "certificate_hash": "6feab397c695afe5b98bdcd7e1a8e7726209816a"
+          }
+        },
+        {
+          "client_id": "797012760021-t3ds67ra6trthtd8q7r0b1ehp61bt23d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3hwizl0K01QJGkEQhtIqT68SUnrj-GBQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "797012760021-t3ds67ra6trthtd8q7r0b1ehp61bt23d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
