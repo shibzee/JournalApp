@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Journal App</string>
     <string name="add_journal">Add Journal</string>
+    <string name="logout_journal">Logout</string>
 </resources>

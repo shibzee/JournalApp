@@ -7,4 +7,8 @@
         android:icon="@drawable/ic_menu_add"
         android:title="@string/add_journal"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/logout"
+        android:title="@string/logout_journal"
+        app:showAsAction="never" />
 </menu>
