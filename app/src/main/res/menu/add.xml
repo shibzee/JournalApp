@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/add_journal"
         android:icon="@drawable/ic_menu_add"
-        android:title="Item"
+        android:title="@string/add_journal"
         app:showAsAction="always" />
 </menu>
