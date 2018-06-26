@@ -5,15 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardBackgroundColor="@android:color/transparent"
-    app:cardElevation="0dp"
+    app:cardElevation="9dp"
     app:cardPreventCornerOverlap="true"
     app:contentPaddingTop="@dimen/list_margin_top">
-    <android.support.v7.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"/>
-    </android.support.v7.widget.RecyclerView>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+      <TextView
+          android:id="@+id/text_thought"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:padding="6sp"
+          android:text="me"/>
+      <TextView
+          android:id="@+id/text_feeling"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:padding="6sp"
+          android:text="you"/>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="end"
+          android:orientation="horizontal">
+          <TextView
+              android:id="@+id/text_date"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:padding="6sp"
+              android:text="@string/app_name"/>
+      </LinearLayout>
+  </LinearLayout>
 </android.support.design.card.MaterialCardView>

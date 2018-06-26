@@ -6,12 +6,8 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnItemLongClick;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -38,11 +34,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
-            case R.id.add_journal:
+            case R.id.menu_add_journal:
                 Intent i = new Intent(getApplicationContext(),AddActivity.class);
                 startActivity(i);
                 break;
-            case R.id.logout:
+            case R.id.menu_logout:
               //  startActivity(i);
                 break;
         }

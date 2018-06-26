@@ -2,4 +2,6 @@
     <string name="app_name">Journal App</string>
     <string name="add_journal">Add Journal</string>
     <string name="logout_journal">Logout</string>
+    <string name="edit_journal">edit journal</string>
+    <string name="delete_journal">delete journal</string>
 </resources>
