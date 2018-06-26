@@ -25,8 +25,12 @@ public class Journal {
     private String mFeeling;
     private String mTimestamp;
 
+    public Journal() {
+    }
+
     public Journal(int id, String thought, String feeling, String timestamp) {
         this.id = id;
+
         this.mThought = thought;
         this.mFeeling = feeling;
         this.mTimestamp = timestamp;
