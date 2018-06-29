@@ -4,25 +4,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardBackgroundColor="@android:color/transparent"
-    app:cardElevation="9dp"
-    app:cardPreventCornerOverlap="true"
-    app:contentPaddingTop="@dimen/list_margin_top">
+    android:background="@color/lightGray"
+    app:cardCornerRadius="0dp"
+    android:layout_marginBottom="0dp"
+    app:cardPreventCornerOverlap="true">
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:orientation="vertical">
+      android:orientation="vertical"
+      android:padding="10dp">
       <TextView
           android:id="@+id/text_thought"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:padding="6sp"
+          android:padding="3sp"
+          android:textStyle="bold"
           android:text="me"/>
       <TextView
           android:id="@+id/text_feeling"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:padding="6sp"
+          android:padding="3sp"
           android:text="you"/>
       <LinearLayout
           android:layout_width="match_parent"
@@ -33,7 +35,7 @@
               android:id="@+id/text_date"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:padding="6sp"
+              android:padding="3sp"
               android:text="@string/app_name"/>
       </LinearLayout>
   </LinearLayout>

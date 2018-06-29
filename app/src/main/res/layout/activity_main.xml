@@ -1,20 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinator_layout"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.journalapp.MainActivity">
- <include layout="@layout/toolbar"/>
- <android.support.v7.widget.RecyclerView
-     android:id="@+id/recycler_view"
-     android:layout_width="match_parent"
-     android:layout_height="match_parent" />
- <TextView
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:fontFamily="sans-serif-light"
-     />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <include layout="@layout/toolbar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/spacer_10"
+        android:paddingLeft="@dimen/spacer_16"
+        android:paddingRight="@dimen/spacer_16"
+        android:paddingTop="@dimen/spacer_10"
+       >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        <TextView
+            android:id="@+id/text_empty_journals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
 
-</LinearLayout>
+    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_add_journal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_menu_add" />
+
+</android.support.design.widget.CoordinatorLayout>

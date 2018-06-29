@@ -40,7 +40,10 @@ public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.JournalH
         View itemView = LayoutInflater.from(mContext).inflate(R.layout.journal_list_row,viewGroup, false);
         return new JournalHolder(itemView);
     }
-
+    public void addItemAll(List<Journal> journalModel) {
+        journalsList.addAll(journalModel);
+        notifyDataSetChanged();
+    }
     @Override
     public void onBindViewHolder(@NonNull JournalHolder journalHolder, int position) {
         journalHolder.bind(journalsList.get(position));
@@ -66,6 +69,7 @@ public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.JournalH
             mThought.setText(journal.getThought());
             mFeeling.setText(journal.getFeeling());
             mDate.setText(formatDate(journal.getTimestamp()));
+           // mDate.setText("12th, June 2018");
         }
     }
     private String formatDate(String dateStr) {
@@ -75,7 +79,7 @@ public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.JournalH
             fmt.setTimeZone(TimeZone.getTimeZone("UTC"));
             Date date = fmt.parse(dateStr);
 
-            SimpleDateFormat fmtOut = new SimpleDateFormat("MMM d",Locale.US);
+            SimpleDateFormat fmtOut = new SimpleDateFormat("h:mm a   yyyy-MM-dd",Locale.US);
             return fmtOut.format(date);
         } catch (ParseException e) {
             e.printStackTrace();

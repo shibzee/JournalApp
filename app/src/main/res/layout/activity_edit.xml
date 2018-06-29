@@ -1,9 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.journalapp.EditActivity">
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context="com.journalapp.AddActivity">
+    <include layout="@layout/toolbar"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacer_20"
+        android:textSize="@dimen/spacer_20"
+        android:text="Add New Journal"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            style="@style/Widget.Shrine.TextInputLayout"
+            android:hint="@string/thought_hint">
 
-</android.support.constraint.ConstraintLayout>
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edit_thought"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:maxLines="1" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Shrine.TextInputLayout"
+            android:layout_margin="8dp"
+            android:layout_weight="3"
+            android:hint="@string/feeling_hint">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edit_feeling"
+                android:layout_width="match_parent"
+                android:layout_height="250sp"
+                android:lines="6"
+                android:ems="10"
+                android:gravity="start"
+                android:inputType="textLongMessage"
+                android:maxLines="10" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/btn_add_new"
+            style="@style/Widget.Shrine.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacer_10"
+            android:layout_weight="0"
+            android:text="Add" />
+    </LinearLayout>
+</LinearLayout>

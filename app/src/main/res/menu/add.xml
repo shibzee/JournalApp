@@ -3,11 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/menu_add_journal"
-        android:icon="@drawable/ic_menu_add"
-        android:title="@string/add_journal"
-        app:showAsAction="always" />
-    <item
         android:id="@+id/menu_logout"
         android:title="@string/logout_journal"
         app:showAsAction="never" />

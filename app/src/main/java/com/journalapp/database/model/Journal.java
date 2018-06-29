@@ -5,7 +5,7 @@ package com.journalapp.database.model;
  */
 
 public class Journal {
-    public static final String TABLE_NAME = "notes";
+    public static final String TABLE_NAME = "journal";
     public static final String COLUMN_ID = "id";
     public static final String COLUMN_THOUGHT = "thought";
     public static final String COLUMN_FEELING= "feeling";
@@ -16,9 +16,14 @@ public class Journal {
             "CREATE TABLE " + TABLE_NAME + "("
                     + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                     + COLUMN_THOUGHT + " TEXT,"
-                    + COLUMN_FEELING + "TEXT,"
+                    + COLUMN_FEELING + " TEXT,"
                     + COLUMN_TIMESTAMP + " DATETIME DEFAULT CURRENT_TIMESTAMP"
                     + ")";
+
+    public Journal(String mThought, String mFeeling) {
+        this.mThought = mThought;
+        this.mFeeling = mFeeling;
+    }
 
     private int id;
     private String mThought;
@@ -30,7 +35,6 @@ public class Journal {
 
     public Journal(int id, String thought, String feeling, String timestamp) {
         this.id = id;
-
         this.mThought = thought;
         this.mFeeling = feeling;
         this.mTimestamp = timestamp;

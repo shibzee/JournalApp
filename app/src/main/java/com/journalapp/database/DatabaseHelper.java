@@ -21,7 +21,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
 
     // Database Name
-    private static final String DATABASE_NAME = "journal_db";
+    private static final String DATABASE_NAME = "journal.db";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -43,8 +43,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Create tables again
         onCreate(sqLiteDatabase);
     }
-    public long insertNote(String thought,String feeling) {
+    public long insertJournal(String thought,String feeling) {
         // get writable database as we want to write data
+
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
@@ -57,18 +58,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         long id = db.insert(Journal.TABLE_NAME, null, values);
 
         // close db connection
-        db.close();
+//        db.close();
 
         // return newly inserted row id
         return id;
     }
+
 
     public Journal getJournal(long id) {
         // get readable database as we are not inserting anything
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = db.query(Journal.TABLE_NAME,
-                new String[]{Journal.COLUMN_ID, Journal.COLUMN_THOUGHT,Journal.COLUMN_FEELING,Journal.COLUMN_TIMESTAMP},
+//                new String[]{Journal.COLUMN_ID, Journal.COLUMN_THOUGHT,Journal.COLUMN_FEELING,Journal.COLUMN_TIMESTAMP},
+                null,
                 Journal.COLUMN_ID + "=?",
                 new String[]{String.valueOf(id)}, null, null, null, null);
 
@@ -88,6 +91,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return journal;
     }
 
+//    public Cursor getJournal() {
+//        SQLiteDatabase db = this.getReadableDatabase();
+//        String[] columns = new String[] { Journal.COLUMN_ID, Journal.COLUMN_THOUGHT, Journal.COLUMN_FEELING,Journal.COLUMN_TIMESTAMP };
+//        Cursor cursor = db.query(Journal.TABLE_NAME, columns, null, null, null, null, null);
+//        if (cursor != null) {
+//            cursor.moveToFirst();
+//        }
+//        return cursor;
+//    }
     public List<Journal> getAllJournals() {
         List<Journal> journals = new ArrayList<>();
 
@@ -118,7 +130,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return journals;
     }
 
-    public int getNotesCount() {
+    public int getJournalsCount() {
         String countQuery = "SELECT  * FROM " + Journal.TABLE_NAME;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(countQuery, null);
