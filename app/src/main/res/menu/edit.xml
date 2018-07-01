@@ -7,9 +7,4 @@
         android:icon="@drawable/ic_edit"
         android:title="@string/edit_journal"
         app:showAsAction="ifRoom" />
-    <item
-        android:id="@+id/menu_delete_journal"
-        android:icon="@drawable/ic_delete"
-        android:title="@string/delete_journal"
-        app:showAsAction="always" />
 </menu>

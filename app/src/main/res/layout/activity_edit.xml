@@ -6,13 +6,12 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     tools:context="com.journalapp.AddActivity">
-    <include layout="@layout/toolbar"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="@dimen/spacer_20"
         android:textSize="@dimen/spacer_20"
-        android:text="Add New Journal"/>
+        android:text="Edit Journal"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -52,12 +51,12 @@
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.button.MaterialButton
-            android:id="@+id/btn_add_new"
+            android:id="@+id/btn_update_journal"
             style="@style/Widget.Shrine.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/spacer_10"
             android:layout_weight="0"
-            android:text="Add" />
+            android:text="Update" />
     </LinearLayout>
 </LinearLayout>

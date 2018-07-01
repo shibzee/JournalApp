@@ -1,10 +1,12 @@
 package com.journalapp.database.model;
 
+import java.io.Serializable;
+
 /**
  * Created by root on 26/06/18.
  */
 
-public class Journal {
+public class Journal implements Serializable {
     public static final String TABLE_NAME = "journal";
     public static final String COLUMN_ID = "id";
     public static final String COLUMN_THOUGHT = "thought";

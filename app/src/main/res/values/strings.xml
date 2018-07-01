@@ -6,4 +6,5 @@
     <string name="delete_journal">delete journal</string>
     <string name="thought_hint">Thought</string>
     <string name="feeling_hint">Feeling</string>
+    <string name="sign_in_with_google">Sign In With Google</string>
 </resources>

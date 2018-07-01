@@ -156,6 +156,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return db.update(Journal.TABLE_NAME, values, Journal.COLUMN_ID + " = ?",
                 new String[]{String.valueOf(journal.getId())});
     }
+//
+//    public int update(Journal journal){
+//        SQLiteDatabase db = this.getWritableDatabase();
+//
+//        ContentValues values = new ContentValues();
+//        values.put(Journal.COLUMN_THOUGHT, journal.getThought());
+//        values.put(Journal.COLUMN_FEELING,journal.getFeeling());
+//    }
+
+
+    public boolean updateData(String id,String thought,String feeling) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+    //    contentValues.put(Journal.COLUMN_ID,id);
+        contentValues.put(Journal.COLUMN_THOUGHT,thought);
+        contentValues.put(Journal.COLUMN_FEELING,feeling);
+      //  contentValues.put(COL_4,marks);
+        db.update(Journal.TABLE_NAME, contentValues, "ID = ?",new String[] { id });
+        return true;
+    }
 
     //Deleting Journals
     public void deleteJournal(Journal journal) {

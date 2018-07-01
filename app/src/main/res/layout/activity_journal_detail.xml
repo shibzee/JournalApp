@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.journalapp.JournalDetail">
 <include layout="@layout/toolbar"/>
-
-</RelativeLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/text_thought_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacer_20"
+        android:textSize="@dimen/text_detail"
+        android:textAllCaps="true"
+        android:text="@string/app_name"/>
+    <TextView
+        android:id="@+id/text_feeling_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/spacer_15"
+        android:paddingRight="@dimen/spacer_15"
+        android:textSize="@dimen/text_detail"
+        android:text="@string/app_name"/>
+</ScrollView>
+</LinearLayout>
