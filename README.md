@@ -23,7 +23,9 @@ Click on the floating plus + button on the home screen.
 ![Update Journal](https://github.com/shibzee/JournalApp/blob/master/Screenshot_2018-07-01-18-17-27.png)
 
 ### Deleting an existing Journal
+
 To delete a journal long press the list item to display a menu then select delete to delete it from Database
+
 ![Delete Journal](https://github.com/shibzee/JournalApp/blob/master/Screenshot_2018-07-01-18-13-52.png)
 
 ### Viewing a Journal
