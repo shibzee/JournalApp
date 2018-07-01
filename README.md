@@ -8,35 +8,25 @@ Downloading and installing the application to your mobile phone
 ### Prerequisites
 Minimum Android Version JellyBean 4.1 or greater
 
-### Image
-![Journal](https://github.com/shibzee/JournalApp/blob/master/Screenshot_2018-07-01-18-38-06.png)
+## Usage
+First of all you will need to sign in with your Google Account
+![Sign In](https://github.com/shibzee/JournalApp/blob/master/Screenshot_2018-07-01-18-15-49.png)
 
-### Installing
+### Adding a new Journal
+![Add Journal](https://github.com/shibzee/JournalApp/blob/master/Screenshot_2018-07-01-18-13-41.png)
 
-A step by step series of examples that tell you how to get a development env running
+### Updating an existing Journal
+![Update Journal](https://github.com/shibzee/JournalApp/blob/master/Screenshot_2018-07-01-18-17-27.png)
 
-Say what the step will be
+### Deleting an existing Journal
+To delete a journal long press the list item to display a menu then select delete to delete it from Database
+![Delete Journal](https://github.com/shibzee/JournalApp/blob/master/Screenshot_2018-07-01-18-13-52.png)
 
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+### Viewing a Journal
+Click on the list item to view it's detail
+![Add Journal](https://github.com/shibzee/JournalApp/blob/master/Screenshot_2018-07-01-18-14-06.png)
 
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Deployment
 
@@ -47,9 +37,12 @@ Add additional notes about how to deploy this on a live system
 * Android Studio
 * [Maven](https://maven.apache.org/) - Dependency Management
 
-## Contributing
+## Some Libraries Used
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+* Butterknife
+* Sqlite Database
+* Firebase
+
 
 ## Author
 
@@ -61,7 +54,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
+* Google Material Design Codelabs
+* FaveBakes
 * etc
 
