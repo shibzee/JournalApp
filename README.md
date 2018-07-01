@@ -10,9 +10,13 @@ Minimum Android Version JellyBean 4.1 or greater
 
 ## Usage
 First of all you will need to sign in with your Google Account
+
 ![Sign In](https://github.com/shibzee/JournalApp/blob/master/Screenshot_2018-07-01-18-15-49.png)
 
 ### Adding a new Journal
+
+Click on the floating plus + button on the home screen.
+
 ![Add Journal](https://github.com/shibzee/JournalApp/blob/master/Screenshot_2018-07-01-18-13-41.png)
 
 ### Updating an existing Journal
@@ -23,14 +27,11 @@ To delete a journal long press the list item to display a menu then select delet
 ![Delete Journal](https://github.com/shibzee/JournalApp/blob/master/Screenshot_2018-07-01-18-13-52.png)
 
 ### Viewing a Journal
+
 Click on the list item to view it's detail
+
 ![Add Journal](https://github.com/shibzee/JournalApp/blob/master/Screenshot_2018-07-01-18-14-06.png)
 
-
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
