@@ -56,13 +56,15 @@ public class MainActivity extends AppCompatActivity{
     public FirebaseAuth firebaseAuth;
     @BindView(R.id.recycler_view)
      RecyclerView recyclerView;
-    @BindView(R.id.text_empty_journals)
-    TextView mEmptyJournals;
+   /* @BindView(R.id.text_empty_journals)
+    TextView mEmptyJournals;*/
     @BindView(R.id.fab_add_journal)
     FloatingActionButton mFabAddButton;
 
     //Action Mode for toolbar
     private ActionMode mActionMode;
+    TextView emptyText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +72,7 @@ public class MainActivity extends AppCompatActivity{
         setUpToolbar();
         ButterKnife.bind(this);
 
+        emptyText = findViewById(R.id.tv_no_data);
 
         // Getting Firebase Auth Instance into firebaseAuth object.
         firebaseAuth = FirebaseAuth.getInstance();
@@ -89,6 +92,8 @@ public class MainActivity extends AppCompatActivity{
 
         mAdapter = new JournalAdapter(this, journalList);
 
+
+
         DefaultItemAnimator itemAnimator = new DefaultItemAnimator();
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
 
@@ -100,7 +105,11 @@ public class MainActivity extends AppCompatActivity{
         recyclerView.addItemDecoration(shadowItemDecorator);
         recyclerView.addItemDecoration(itemDecorator);
         recyclerView.setItemAnimator(itemAnimator);
-        recyclerView.setAdapter(mAdapter);
+        if (!journalList.isEmpty())
+            //if data is available, don't show the empty text
+            recyclerView.setAdapter(mAdapter);
+        else
+            emptyText.setVisibility(View.VISIBLE);
 
 
 
@@ -133,8 +142,8 @@ public class MainActivity extends AppCompatActivity{
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
         getMenuInflater().inflate(R.menu.main_menu,menu);
-     //   MenuItem mUserName = menu.findItem(R.id.user_name);
-     //   mUserName.setTitle(user.getDisplayName());
+       MenuItem mUserName = menu.findItem(R.id.user_name);
+       mUserName.setTitle(user.getDisplayName());
         return true;
     }
 

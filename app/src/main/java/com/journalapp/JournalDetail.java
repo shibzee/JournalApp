@@ -28,14 +28,11 @@ public class JournalDetail extends AppCompatActivity {
     Intent i;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_journal_detail);
         setUpToolbar();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-       // getSupportActionBar().setTitle("meat");
+      // getSupportActionBar().setTitle("meat");
         ButterKnife.bind(this);
        i= getIntent();
 

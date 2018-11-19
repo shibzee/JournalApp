@@ -43,6 +43,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Create tables again
         onCreate(sqLiteDatabase);
     }
+
+
+
+    //Creating a method to insert items into the database
     public long insertJournal(String thought,String feeling) {
         // get writable database as we want to write data
 
@@ -64,7 +68,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return id;
     }
 
-
+//Creating a method to handle getting a specific item by its id;
     public Journal getJournal(long id) {
         // get readable database as we are not inserting anything
         SQLiteDatabase db = this.getReadableDatabase();
@@ -100,12 +104,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 //        }
 //        return cursor;
 //    }
+
+
+    //This method handle getting all the journals or todos from the database
     public List<Journal> getAllJournals() {
         List<Journal> journals = new ArrayList<>();
 
-        // Select All Query
+        // Select All Query which looks like our normal sql query
         String selectQuery = "SELECT  * FROM " + Journal.TABLE_NAME + " ORDER BY " +
                 Journal.COLUMN_TIMESTAMP + " DESC";
+
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -144,7 +152,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    //Updating Journals
+    //Updating a specific  Journal or we could say note from our database
     public int updateJournal(Journal journal) {
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -152,7 +160,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(Journal.COLUMN_THOUGHT, journal.getThought());
         values.put(Journal.COLUMN_FEELING,journal.getFeeling());
 
-        // updating row
+        // updating row from the database
         return db.update(Journal.TABLE_NAME, values, Journal.COLUMN_ID + " = ?",
                 new String[]{String.valueOf(journal.getId())});
     }

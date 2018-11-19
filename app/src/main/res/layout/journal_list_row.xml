@@ -13,19 +13,23 @@
       android:layout_height="wrap_content"
       android:orientation="vertical"
       android:padding="10dp">
+
       <TextView
           android:id="@+id/text_thought"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:maxLines="2"
           android:padding="3sp"
-          android:textStyle="bold"
-          android:text="me"/>
+          android:text="me"
+          android:textStyle="bold" />
+
       <TextView
           android:id="@+id/text_feeling"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:maxLines="2"
           android:padding="3sp"
-          android:text="you"/>
+          android:text="you" />
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
